@@ -1,0 +1,40 @@
+.searchBar {
+    position: sticky;
+    text-align: center;
+    margin: 20px auto; /* Centra horizontalmente */
+    max-width: 400px; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    
+  }
+  
+  .searchInput {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em 3em;
+    font-size: auto;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #221919c9;
+    cursor: pointer;
+    transition: border-color 0.25s; 
+    display: flex;
+    justify-content: end;
+  align-items: left;
+  }
+  .but {
+    border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: auto;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #221919c9;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+    
+  }
+  
+  
