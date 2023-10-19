@@ -1,34 +1,58 @@
 .card {
-    width: 300px;
+  width: 300px;
+  height: 330px; /* Alto fijo para las cartas */
+  transition: transform 0.3s, box-shadow 0.3s;
   background-color: #000;
   color: #fff;
   border: 1px solid #333;
   border-radius: 5px;
-  margin: 20px;
+  margin: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo del encabezado de la tarjeta */
-  .cardHeader {
-    background-color: #111;
-  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Escalar la tarjeta al 105% del tamaño original */
+  box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Estilo del encabezado de la tarjeta */
+.cardHeader {
+  background-color: #111;
+  color:white;
+  padding: 1px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  }
-  
-  /* Estilo de la imagen de la tarjeta */
-  .cardImage {
-    text-align: center;
-  }
-  
-  .cardImage img {
-    width: 100%;
+}
+
+/* Estilo de la imagen de la tarjeta */
+.cardImage {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cardImage img {
+  width: 100%;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5px 5px 0 0;
-  }
+}
+
+.cardLink {
+  text-decoration: none; /* Sin subrayado del enlace */
+  color: #fff; /* Color del texto blanco */
+}
+.cardButton {
+  position: flex;
+  top: 10px; /* Ajusta la posición vertical */
+  left: 1000px; /* Ajusta la posición horizontal */
+  border-radius: 8px;
+  color: #000;
+  border: 1px solid #000;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #00ff00;
+  cursor: pointer;
+  transition: border-color 0.25s;
   
-  /* Estilo de la descripción de la tarjeta */
-  .cardDescription {
-    padding: 10px;
 }

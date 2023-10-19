@@ -1,4 +1,16 @@
-.nav{
+.navBar {
+    position: fixed;
+    display: flex;
     background-color: greenyellow;
     width: 100%;
+    border-radius: 10px;
+    justify-content: flex-end; /* Alinea los elementos al extremo derecho */
+    top: 20px;
+    right: 1.5px; /* Ajusta la posición a la esquina superior derecha */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+button{
+    margin-left: 15px;
 }

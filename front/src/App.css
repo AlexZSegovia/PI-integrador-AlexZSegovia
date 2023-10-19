@@ -2,7 +2,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 10rem;
   text-align: center;
 }
 body{
@@ -11,6 +11,10 @@ background-size: cover;
 background-repeat: no-repeat ;
 background-attachment: fixed;
 background-position: center;
+
+  filter: brightness(0.8); 
+  filter: contrast(1.2);
+
 }
 .logo {
   height: 6em;
@@ -19,10 +23,10 @@ background-position: center;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #ffc5c5aa);
+  filter: drop-shadow(0 0 2em #25222200);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #00000000);
 }
 
 @keyframes logo-spin {
@@ -41,9 +45,10 @@ background-position: center;
 }
 
 .card {
-  padding: 2em;
+  display: inline-block;
+  padding: 10em;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #88888800;
 }
