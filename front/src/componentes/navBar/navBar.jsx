@@ -11,7 +11,8 @@ import { Link, NavLink, useLocation} from "react-router-dom";
          
          <NavLink to="/About"><button>About</button></NavLink>
         <SearchBar onSearch={onSearch}/>
-         
+        <Link to="/"><button>logout</button></Link>
+
        </div>
     );}
  };
