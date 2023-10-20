@@ -6,6 +6,7 @@ import  { useState } from "react";
 import { Route, Routes }   from 'react-router-dom';
 import Detail from './componentes/Detail/Detail';
 import About from  "./componentes/About/About"
+import Form from './componentes/Form/Form';
 function App() {
   const [characters,setCharacters]=useState([])
   function onSearch(id) {
@@ -25,14 +26,18 @@ function App() {
     
   );
 };
+
  
   return (
     <div>
       <NavBar onSearch={onSearch}/>
+      
     <Routes>
-      <Route path="/" element={<Cards characters={characters} onClose={onClose}/>}/>
+      
+      <Route path="/Home" element={<Cards characters={characters} onClose={onClose}/>}/>      
     <Route path="/about" element={<About/>}/>
     <Route path="/detail/:id" element={<Detail/>}/>
+    <Route path="/" element={<Form/>}/>
 
     </Routes>
     </div>

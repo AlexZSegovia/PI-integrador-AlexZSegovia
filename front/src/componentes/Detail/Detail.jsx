@@ -37,7 +37,8 @@ const Detail = () => {
           <img src={character.image} alt={character.name} />
         </div>
       </div>
-      <Link to="/">
+      
+      <Link to="/Home">
         <button>back</button>
       </Link>
     </div>

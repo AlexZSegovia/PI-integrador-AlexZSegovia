@@ -1,0 +1,50 @@
+.email {
+    margin-bottom: 15px;
+  }
+  
+  .email label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .email input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .constraseña {
+    margin-bottom: 15px;
+  }
+  
+  .constraseña label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .constraseña input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .but button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+   
+    
+  }
+  
+  .but button:hover {
+    background-color: greenyellow;
+  }
+  .h2{
+    text-align: center; 
+
+  }
+  
+
+  

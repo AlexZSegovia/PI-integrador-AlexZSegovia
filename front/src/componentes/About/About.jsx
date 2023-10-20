@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import style from "./About.module.css"
 const About=()=>{
     return(
@@ -7,7 +8,10 @@ const About=()=>{
             <h1>origin:Heart</h1>
             <h1>Gender:Male</h1>
             <h1>Especie: Human</h1>
+            <NavLink to="/Home"><button>Home</button></NavLink>
+
         </div>
+        
     )
 }
 export default About
