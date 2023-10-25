@@ -5,6 +5,7 @@ const SearchBar = ({onSearch})=> {
    const handleChange=(event)=>{
       setId(event.target.value)
    }
+   if (location.pathname !=="/Favorites"  ){
    return (
       <div className={style.searchBar}>
          <input type='search' value={id} onChange={handleChange}/> 
@@ -12,5 +13,5 @@ const SearchBar = ({onSearch})=> {
       </div>
    );
 };
-
+};
 export default SearchBar;

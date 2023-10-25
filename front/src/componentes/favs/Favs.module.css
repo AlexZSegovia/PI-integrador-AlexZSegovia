@@ -1,0 +1,37 @@
+.selectors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 5px; 
+  }
+  
+  select {
+    background-color: greenyellow;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    color: black; 
+  }
+  
+  .selectors select {
+    flex: 1; 
+  }
+  
+  select:hover {
+    background-color: yellow; 
+    transform: scale(1.05);
+  }
+  
+  
+  .cartitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 20px; 
+  }
+  
+ 

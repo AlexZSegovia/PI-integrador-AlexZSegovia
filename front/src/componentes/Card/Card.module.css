@@ -28,12 +28,16 @@
 .cardImage {
   text-align: center;
   text-transform: capitalize;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardImage img {
-  width: 100%;
+  max-width: 100%;
   max-height: 200px;
-  object-fit: contain;
+  object-fit: contain; /* La imagen se ajustará a la tarjeta sin distorsionarla y dejará espacio en los bordes si es necesario */
   border-radius: 5px 5px 0 0;
 }
 
