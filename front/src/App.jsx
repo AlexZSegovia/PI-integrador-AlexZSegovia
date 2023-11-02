@@ -14,7 +14,7 @@ const PASSWORD = 'unapass1';
 function App() {
   const [characters,setCharacters]=useState([])
   function onSearch(id) {
-    axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-alexzsegovia`).then(
+    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
        ({ data }) => {
           if (data.name) {
              setCharacters((oldChars) => [...oldChars, data]);
