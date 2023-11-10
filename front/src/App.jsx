@@ -13,36 +13,51 @@ import Favs from './componentes/favs/favs';
 
 function App() {
   const [characters,setCharacters]=useState([])
-  function onSearch(id) {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
-       ({ data }) => {
-          if (data.name) {
-             setCharacters((oldChars) => [...oldChars, data]);
-          } else {
-             window.alert('¡No hay personajes con este ID!');
-          }
-       }
-    );
- }
+
+  async function onSearch(id) {
+    try {
+      const response = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`);
+      const { data } = response;
+  
+      if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data]);
+      } else {
+        alert('No se encontró ningún personaje con este ID.');
+      }
+    } catch (error) {
+      console.error('Hubo un error al buscar el personaje:', error.message);
+      alert('Ocurrió un error al buscar el personaje.');
+    }
+  }
+  
+ 
  const [access, setAccess] = useState(false);
   const navigate = useNavigate();
   
-  function login(userData) {
+
+
+
+  async function login(userData) {
+      try {
       const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(access);
-         access && navigate('/home');
-      });
+      const URL = 'http://localhost:3001/rickandmorty/login'; // Corregir la URL
+      const {data} = await axios.get(`${URL}?email=${email}&password=${password}`);
+      const { access } = data;
+      setAccess(access);
+      access && navigate('/home');
+      } catch (error) {
+        alert("¡No hay usuarios registrados!")
+      }
    }
+
+
   useEffect(() => {
     !access && navigate('/');
   }, [access]);
 
   const onClose = (id) => {
     setCharacters((prevCharacters) =>
-      prevCharacters.filter((char) => char.id !== Number(id))
+      prevCharacters.filter((char) => char.id !== id)
     );
   };
   
