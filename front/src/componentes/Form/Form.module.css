@@ -1,54 +1,96 @@
-.email {
-    margin-bottom: 15px;
-  }
-  
-  .email label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .email input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .constraseña {
-    margin-bottom: 15px;
-  }
-  
-  .constraseña label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .constraseña input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .but button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-   
-    
-  }
-  
-  .but button:hover {
-    background-color: greenyellow;
-  }
-  .h2{
-    text-align: center; 
+/* ... Otros estilos */
 
-  }
-  .error-text {
-    color: red;
-    background-color: black;
-  }
-  
+/* Estilos generales del formulario */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #02020233;
+  border: 2px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  text-align: center;
+  position: relative; /* Añadimos posición relativa */
+  background-image: url('.././../img/c0bc571e535832bec8b2933b0f720bb1.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
 
-  
+/* Estilos para los campos de email y contraseña */
+form .email,
+form .contraseña {
+  margin-bottom: 30px;
+  text-align: left;
+  width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+/* Estilos para las etiquetas de Email y Password */
+form .email label,
+form .password label {
+  display: block;
+  font-weight: bold;
+  font-size: 20px; /* Tamaño más grande para Email y Password */
+  margin-bottom: 20px; /* Aumentamos el espacio para los labels */
+  color: #03ff10;
+  text-shadow: black;
+  border-bottom: 2px solid black; /* Borde inferior negro */
+  padding-bottom: 5px; /* Espaciado para el borde inferior */
+  width: 100%; /* Asegurar el mismo ancho que el input */
+  text-align: left; /* Alinear el texto a la izquierda */
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+form .email input,
+form .password input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #45a049;
+  border-radius: 15px;
+  font-size: 14px;
+  margin-bottom: 10px; /* Espacio entre el input y el siguiente */
+}
+
+/* Estilos para el botón */
+form .but button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: rgb(2, 2, 2);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Espacio antes del botón */
+}
+
+form .but button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el texto de error */
+form .error-text {
+  color: #ff0000;
+  background-color: #f4433600;
+  border-radius: 15px;
+  padding: 10px;
+  visibility: hidden; /* Ocultar el mensaje de error por defecto */
+  position: absolute; /* Posición absoluta para superponer */
+  bottom: 110%; /* Espacio desde abajo */
+  left: 50%; /* Alinear al centro horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+}
+
+/* Estilos para el título */
+h3 {
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+

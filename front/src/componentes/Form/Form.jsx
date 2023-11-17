@@ -31,8 +31,8 @@ const Form = ({login}) => {
   };
 
   return (
-    <div>
-      <h2>Inicia Sesión </h2>
+    <div className={style.formulariostyle}>
+      <h3>Inicia Sesión </h3>
       <form onSubmit={handleSubmit}>
         <div className={style.email}>
           <label>Email:</label>
@@ -45,7 +45,7 @@ const Form = ({login}) => {
           />
             {errors.e1 ? (<p className={style["error-text"]}>{errors.e1}</p>) : ( <p className={style["error-text"]}>{errors.e2}</p>)}
         </div>
-        <div className={style.constraseña}>
+        <div className={style.password}>
           <label>Contraseña:</label>
           <input
             type="password"

@@ -5,26 +5,30 @@ const morgan = require('morgan');
 const router=require("./routes/index")
 server.use(express.json());
 server.use(morgan("dev"))
+const { conn } = require('./DB_connection');
 
-server.use((req, res, next) => {
-   res.header('Access-Control-Allow-Origin', '*');
-   res.header('Access-Control-Allow-Credentials', 'true');
-   res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept'
-   );
-   res.header(
-      'Access-Control-Allow-Methods',
-      'GET, POST, OPTIONS, PUT, DELETE'
-   );
-   next();
-});
-server.use("/rickandmorty", router)
+conn.sync({force:false}).then(()=>{
+   server.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Credentials', 'true');
+      res.header(
+         'Access-Control-Allow-Headers',
+         'Origin, X-Requested-With, Content-Type, Accept'
+      );
+      res.header(
+         'Access-Control-Allow-Methods',
+         'GET, POST, OPTIONS, PUT, DELETE'
+      );
+      next();
+   });
+   server.use("/rickandmorty", router)
+   
+   
+   
+   
+   server.listen(PORT, ()=>console.log(`Server raised in port: ${PORT}`))
+})
 
-
-
-
-server.listen(PORT, ()=>console.log(`Server raised in port: ${PORT}`))
 
 
 

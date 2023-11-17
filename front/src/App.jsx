@@ -8,7 +8,7 @@ import Detail from './componentes/Detail/Detail';
 import About from  "./componentes/About/About"
 import Form from './componentes/Form/Form';
 import Favs from './componentes/favs/favs';
-
+import style from "./App.css"
 
 
 function App() {
@@ -63,9 +63,8 @@ function App() {
   
 
   return (
-    <div>
+    <div className={style.appstyle}>
       <NavBar onSearch={onSearch}/>
-      
     <Routes>
       
     <Route path="/Home" element={<Cards characters={characters} onClose={onClose} />
